@@ -1,0 +1,115 @@
+<html lang="en"><head></head><body>&lt;
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driving License Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+
+    <div class="container">
+        <h1>Driving License Registration Form</h1>
+        <form action="/submit-form" method="POST">
+            <h2>Personal Information</h2>
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" required>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="nationality">Nationality</label>
+            <input type="text" id="nationality" name="nationality" required>
+
+            <label for="address">Residential Address</label>
+            <textarea id="address" name="address" rows="3" required></textarea>
+
+            <label for="contact">Contact Number</label>
+            <input type="tel" id="contact" name="contact" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <h2>License Details</h2>
+            <label for="licenseType">Type of License</label>
+            <select id="licenseType" name="licenseType" required>
+                <option value="">Select</option>
+                <option value="learner">Learner's License</option>
+                <option value="permanent">Permanent License</option>
+            </select>
+
+            <label for="vehicleCategory">Vehicle Category</label>
+            <select id="vehicleCategory" name="vehicleCategory" required>
+                <option value="">Select</option>
+                <option value="motorcycle">Motorcycle</option>
+                <option value="lightVehicle">Light Motor Vehicle</option>
+                <option value="heavyVehicle">Heavy Motor Vehicle</option>
+            </select>
+
+            <label for="testDate">Preferred Test Date</label>
+            <input type="date" id="testDate" name="testDate" required>
+
+            <h2>Declaration</h2>
+            <label>
+                <input type="checkbox" name="declaration" required>
+                I declare that all information provided is accurate and I agree to abide by traffic rules.
+            </label>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+
+</body></html>
